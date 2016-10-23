@@ -1,5 +1,5 @@
 # git-cmd
-some useful command for git
+Tried to set up **gitlab** for home projects. Spent a few hours and finally got it running, but can't see any real benefit for such a huge package if the only thing I want is to freely create projects or a *git server*. Finally removed everything and wrote these three  small commands for git
 
 * `git-ls` list the projects on the remote git server repo
 

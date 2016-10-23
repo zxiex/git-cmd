@@ -1,0 +1,15 @@
+#!/bin/bash
+
+proj=$1
+
+if [ -z "$proj" ]; then
+    echo "need to supply the project to get"
+    exit 1
+fi
+
+if [ -z "$GIT_REPO" ]; then
+    echo "GIT_REPO (remote_host:/remote_git_repo) variable is not defined"
+    exit 1
+else
+    git clone $GIT_REPO/$proj
+fi

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ -z "$GIT_REPO" ]; then
+    echo "GIT_REPO (remote_host:/remote_git_repo/)variable is not defined"
+    exit 1
+else
+    info=(${GIT_REPO//:/ })
+    host=${info[0]}
+    repo=${info[1]}
+    
+    ssh $host ls $repo   
+fi

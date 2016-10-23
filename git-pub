@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ -z "$GIT_REPO" ]; then
+    echo "GIT_REPO (remote_host:/remote_git_repo) variable is not defined"
+    exit 1
+else
+    tmpd=`mktemp -d`
+    proj=$(basename $PWD).git
+    git clone --bare $PWD/ $tmpd/$proj
+    scp -qr $tmpd/$proj $GIT_REPO/
+    rm -rf $tmpd
+    git remote add origin $GIT_REPO/$proj
+    git pull origin master
+    git branch --set-upstream-to=origin/master master
+fi

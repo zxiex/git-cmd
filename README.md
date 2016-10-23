@@ -11,3 +11,6 @@ all these commands need to read the enviroment variable `GIT_REPO`, which is
 baiscally `remote_host:/remote_git_repo_dir`
 
 `git pull` and `git push` might need to set the upstream
+
+# use
+copy these `git-*` to your `$PATH` and also export the enviroment variable `GIT_REPO`, then you can use `git ls`, `git get` and `git pub` commands.

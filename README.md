@@ -1,5 +1,5 @@
 # git-cmd
-This repo contains a three simple commands to interact with a *git repo* hosted on a remote server accessible by `ssh`. 
+This repo contains three simple commands to interact with a *git repo* hosted on a remote server accessible by `ssh`. 
 
 * `git-ls` list the projects on the remote git server repo
 
